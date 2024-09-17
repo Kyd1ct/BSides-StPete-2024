@@ -1,0 +1,16 @@
+## Solution: 
+1. Split the gif into individual frames.
+2. Grab the URL from within the frames - https://bsidesstpete-greg.chals.io/greg.pdf
+3. Download the PDF and identify the printer dots.
+4. Decode by hand or by using a tool such as the Deda Toolkit - https://github.com/dfd-tud/deda
+5. Raw flag is 0000033701000024091409040015
+- 033701 - St Pete PO code.
+- 2024-09-14 - date of the CTF.
+- 9:15am - start time of the CTF
+
+### Flag: 
+STPETE24{2024-09-14 09:15 serial 33701}
+OR	
+STPETE24{2024-09-14 09:15 serial 033701}
+OR
+STPETE24{0000033701000024091409040015}
