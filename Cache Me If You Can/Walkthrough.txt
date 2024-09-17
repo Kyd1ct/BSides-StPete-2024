@@ -1,0 +1,17 @@
+## Solution: 
+1. py vol.py -f cache.raw windows.info
+2. py vol.py -f cache.raw windows.pslist
+3. py vol.py -f cache.raw windows.cmdline | grep "vim" -i - 59969b77f58e692a6b0f13e2f5c192ec4508bd41da36830a0f69f3c72c0f3fa6d122da804f367db8afff3f041b82f3ca9ba5c2bdb2736fa8e7bb8b3c43d758abffa1bed20bb6c4183b3d56405b6fd27850fd77b7226a040f first half
+4. py vol.py -f cache.raw windows.cmdline | grep "notepad" -i
+5. py vol.py -f cache.raw windows.memmap --dump --pid 5812 (will show as altered but the data is still there)
+6. strings pid.5812.dmp | grep "stpete" -i
+7. py vol.py -f cache.raw windows.envar | grep "aes" -i (AHiddenn_)
+8. py vol.py -f cache.raw windows.envar | grep "sae" -i (Key123!)
+8. py vol.py -f cache.raw windows.cmdline | grep "chrome" -i
+9. py vol.py -f cache.raw windows.memmap --dump --pid 2500 (chrome)
+10. strings pid.5496.dmp | grep "pastebin" -i - https://pastebin.com/raw/bPDTzqcv
+11. Grab the second half of the encrypted text (d4291a86e9f686c6a85b89f296de9d500006bc3b634ef45123effb8c5b1000103ef6feeb73f881eade0b543ada955d907409bd2127d545d95527fd13a5add007ad137b8436bbb858c69bd43281d833ede0aa134fae1572e9)
+12. Cyberchef - from AES (ECB + Key. Input: Hex; output: Raw) then from Base64
+
+### Flag: 
+STPETE24{V0l4t1l3_C4ch3d_D4tA!}

@@ -1,0 +1,12 @@
+# Title: 
+Cache Me If You Can
+
+## Difficulty:
+Medium
+
+## Description: 
+Unravel this memory dump and see if you can find all the secrets that will lead you to victory!
+
+Memdump is too large for GitHub, you can obtain it from here.
+
+https://drive.google.com/file/d/1l6kCyjh303uo6Kke8LweQYJL_IJOZHzv/view?usp=sharing
